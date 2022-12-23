@@ -5,14 +5,13 @@ import { store, StoreContext } from './app/stores/store';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './app/router/Router';
-import App from './app/layout/App';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
    <StoreContext.Provider value = {store}>
-    <App />
+    <RouterProvider router={router} />
     </StoreContext.Provider>
   
 );
